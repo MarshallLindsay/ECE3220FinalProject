@@ -12,7 +12,7 @@ using namespace std;
 int main(void){
 	int dataPoints = 1000;
 	srand(time(NULL));
-	ofstream file1("frontRight.txt", ios::out | ios::trunc);;
+	ofstream file1("frontLeft.txt", ios::out | ios::trunc);;
 	if(!file1.is_open()){
 		cout<<"\nCould not open the file"<<endl;
 		return(1);
@@ -38,6 +38,17 @@ int main(void){
 		if(left %110 == 0)
 			incrementor*=-1;
 		file1<<left<<" , "<<mid<<" , "<<right<<endl;
+	}
+	incrementor= 1;
+	left = 110;
+	mid = 0;
+	right = 110;
+	for(int i = 0; i < 500; i ++){
+		mid+= incrementor;
+		if(mid %110 == 0)
+			incrementor*=-1;
+		file1<<left<<" , "<<mid<<" , "<<right<<endl;
+			
 	}
 	
 	file1.close();

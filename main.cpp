@@ -64,10 +64,13 @@ void mainOptionMenu(void){
 }
 
 void realTimeDemo(void){
+	string userInput;
 	HWND myconsole = GetConsoleWindow();
 	HDC mydc = GetDC(myconsole);
 	RealTimeGraphics* realTime = new RealTimeGraphics();
 	realTimeGraphicsSetup(realTime);
+	cout<<"\n Real Time graphics setup complete... Press any key to begin"<<endl;
+	getline(cin, userInput);
 	Serial* SP;
 	
 	while(1){
@@ -224,7 +227,7 @@ void realTimeGraphicsSetup(RealTimeGraphics* graphics){
 		getline(cin,userInput);
 		if(userInput == "1"){
 			graphics->draw(&mydc);
-			graphics->draw(&mydc);
+			getline(cin, userInput);
 		}else if(userInput == "2"){
 			int value2;
 			cout<<"\n Please enter the new X value: "<<endl;
@@ -259,6 +262,8 @@ void realTimeGraphicsSetup(RealTimeGraphics* graphics){
 		}else{
 			cout<<"\n Invalid Input!"<<endl;
 		}
+		
+		fflush(stdin);
 	}
 	return;
 }
@@ -283,11 +288,10 @@ void dataVisualization(void){
 	cout<<"\n\n\n\n Car creation and GUI setup complete.\nPress any key to continue"<<endl;
 	getline(cin, userInput);
 	simulation(car, graphicsCar);
+	cout<<"\n Simulation complete!"<<endl;
 	while(1){
-
 		
-		cout<<"\n Simulation complete!"
-			<<"\n What would you like to do?"
+			cout<<"\n What would you like to do?"
 			<<"\n 1)Run the simulation"
 			<<"\n 2)Change car data"
 			<<"\n 3)Change graphics settings"
@@ -374,7 +378,9 @@ void graphicsSetup(CarGraphics* car){
 		}else{
 			cout<<"\nInvalid Input!"<<endl;
 		}
+		fflush(stdin);
 	}
+	
 	return;
 }
 
