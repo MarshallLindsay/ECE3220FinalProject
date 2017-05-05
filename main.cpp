@@ -339,7 +339,7 @@ void graphicsSetup(CarGraphics* car){
 			cin>>value;
 			car->verticalShift(value);
 		}else if(userInput == "4"){
-			cout<<"\n Please enter the value you whish to shift the object horizontally by:"<<endl;
+			cout<<"\n Please enter the value you wish to shift the object horizontally by:"<<endl;
 			cin>>value;
 			car->horizontalShift(value);
 		}else if(userInput == "5"){
