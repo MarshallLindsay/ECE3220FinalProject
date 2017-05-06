@@ -1,9 +1,11 @@
 /*
- * tires.cpp
- *
- *  Created on: Apr 21, 2017
- *      Author: MizzouRacing
- */
+	Marshall Lindsay
+	Max Houck
+	Formula SAE Tire Temperature Visualization
+	ECE 3220 Final Project
+	tires.cpp
+*/
+
 
 #include <iostream>
 #include <vector>

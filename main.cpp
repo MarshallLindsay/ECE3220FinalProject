@@ -1,4 +1,10 @@
-
+/*
+	Marshall Lindsay
+	Max Houck
+	Formula SAE Tire Temperature Visualization
+	ECE 3220 Final Project
+	main.cpp
+*/
 #include<windows.h>
 #include "tires.h"
 #include "SerialClass.h"

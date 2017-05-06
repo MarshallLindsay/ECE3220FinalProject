@@ -1,3 +1,11 @@
+/*
+	Marshall Lindsay
+	Max Houck
+	Formula SAE Tire Temperature Visualization
+	ECE 3220 Final Project
+	serial.cpp
+*/
+
 #include "SerialClass.h"
 
 Serial::Serial(const char *portName)
